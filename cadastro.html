@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Completo</title>
+
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="receitas.html">Receitas</a></li>
+                <li><a href="sobre_mim.html">Sobre Mim</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1>Crie sua Conta</h1>
+        <p style="text-align:center;">Preencha os campos abaixo para realizar o seu cadastro.</p>
+
+        <form action="/enviar-cadastro" method="POST">
+
+            <legend>Dados Pessoais</legend>
+
+            <p>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required minlength="3" placeholder="Digite seu nome">
+            </p>
+
+            <p>
+                <label for="nascimento">Data de Nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento" required>
+            </p>
+
+            <p>
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="0" max="120" placeholder="Sua idade">
+            </p>
+
+            <p>
+                <label for="genero">Gênero:</label>
+                <select id="genero" name="genero" required>
+                    <option value="" disabled selected>Selecione...</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro / Não informar</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" placeholder="Sua cidade">
+            </p>
+
+            <legend>Contato e Observações</legend>
+
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="seu@email.com">
+            </p>
+
+            <p>
+                <label for="comentarios">Comentários Adicionais:</label>
+                <textarea id="comentarios" name="comentarios" rows="4"
+                    placeholder="Digite suas observações..."></textarea>
+            </p>
+
+            <p style="text-align:center;">
+                <button type="reset">Limpar</button>
+                <button type="submit">Enviar Cadastro</button>
+            </p>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nicole 2INF 1</p>
+    </footer>
+
+</body>
+
+</html>
